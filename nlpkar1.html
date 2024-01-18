@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NLP</title>
+</head>
+<body>
+    <form action="/nlpkarkar1" method="post">
+    <p>Enter text</p> 
+    <textarea name="psyop"></textarea><br><br>
+    <input type="submit" value="Analyze">
+    </form> 
+    {% if message %} 
+    {% for i in message['entities']: %}
+    <p>{{ i['name']+"==>"+i['category'] }}</p> 
+    {% endfor %} 
+    {% endif %} 
+    
+    
+</body>
+</html> 
