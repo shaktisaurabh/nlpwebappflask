@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body> 
+    <form action="/santu1" method="post">
+        <p>Enter text</p> 
+        <textarea name="psyop1"></textarea><br><br> 
+        <input type="submit" value="Analyze">
+    </form>
+    {% if message %}
+    {% for i in message['sentiment'] %} 
+    <p>{{ i+"==>"+message['sentiment'][i]|string }}</p> 
+    {% endfor %} 
+    {% endif %} 
+    
+</body>
+</html>
