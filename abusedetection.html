@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Abuse Detection</title>
+</head>
+<body> 
+    <form action="/abusal" method="post">
+        <p>Enter text</p> 
+        <textarea name="psyop2"></textarea><br><br> 
+        <input type="submit" value="Analyze"> 
+    </form>
+    {% if response %}
+    {% for i in response: %} 
+    <p>{{ i+"==>"+response[i]|string }}</p> 
+    {% endfor %} 
+    {% endif %} 
+    
+    
+</body>
+</html> 
